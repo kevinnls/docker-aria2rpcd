@@ -6,4 +6,4 @@ RUN mkdir /downloads && chown 1000:1000 /downloads
 
 USER 1000
 
-CMD aria2c --conf-path=/etc/aria2c.conf
+CMD aria2c --conf-path=/etc/aria2.conf
