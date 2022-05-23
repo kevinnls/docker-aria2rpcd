@@ -32,7 +32,5 @@ jobs:
       with:
         push: true
         platforms: linux/amd64,linux/arm64,linux/arm/v6,linux/arm/v7
-        tags:
-          - kevinnls/aria2rpcd:latest
-          - kevinnls/aria2rpcd:${{ github.sha }}
+        tags: kevinnls/aria2rpcd:latest,kevinnls/aria2rpcd:${{ github.sha }}
 
