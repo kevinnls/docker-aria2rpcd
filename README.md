@@ -11,22 +11,20 @@ PS: it most likely will.
 
 ## usage
 
-> refer: [docs: aria2 conf](https://aria2.github.io/manual/en/html/aria2c.html#aria2-conf)
 
-create a basic aria2 configuration file with **at least** the following:
-```
-# aria2.conf
-enable-rpc=true
-rpc-listen-all=true
-```
-and bind (...or volume 🤨) mount to container's `/downloads`
+bind a file or a directory (...or volume 🤨) mount to the following paths in the container
+
+- `/downloads` - **required** destination directory for downloads
+
+- `/etc/aria2.conf` - **optional** file with additional configuration options
+> refer: [docs: aria2 conf](https://aria2.github.io/manual/en/html/aria2c.html#aria2-conf)
 
 ### `docker run`
 ```
 # extend beyond required
 docker run \
-    -v aria2.conf:/etc/aria2.conf:ro \
     -v downloads_foler:/downloads \
+    -v aria2.conf:/etc/aria2.conf:ro # **optional** \
     -p 6800:6800
 ```
 ### `docker-compose.yml`
