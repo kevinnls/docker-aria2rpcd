@@ -1,4 +1,6 @@
 # aria2 RPC Daemon
+[hub.docker.com/r/kevinnls/aria2rpcd](https://hub.docker.com/r/kevinnls/aria2rpcd)
+
 ## a Docker image
 
 built for my personal use-case

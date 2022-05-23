@@ -3,9 +3,11 @@ name: Docker Image CI
 on:
   push:
     branches: [ main ]
+    paths-ignore: [ '.github/','README.md' ]
   pull_request:
     branches: [ main ]
     types: [ closed ]
+    paths-ignore: [ '.github/','README.md' ]
 
 jobs:
 
